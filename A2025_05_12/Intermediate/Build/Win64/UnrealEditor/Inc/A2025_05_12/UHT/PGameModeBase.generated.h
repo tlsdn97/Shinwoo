@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APGameModeBase(APGameModeBase&&); \
@@ -33,7 +31,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APGameModeBase) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APGameModeBase) \
 	NO_API virtual ~APGameModeBase();
 
 

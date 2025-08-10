@@ -76,7 +76,6 @@ template<> A2025_05_12_API UClass* StaticClass<APGameModeBase>()
 {
 	return APGameModeBase::StaticClass();
 }
-APGameModeBase::APGameModeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(APGameModeBase);
 APGameModeBase::~APGameModeBase() {}
 // End Class APGameModeBase

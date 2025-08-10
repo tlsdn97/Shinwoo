@@ -12,18 +12,40 @@ class A2025_05_12_API APPlayer : public ACharacter
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
 	APPlayer();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
+    class UCameraComponent* FirstPersonCamera;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Mesh")
+    class USkeletalMeshComponent* FirstPersonArms;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light")
+    class USpotLightComponent* ShoulderLight;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    float WalkSpeed = 300.f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    float RunSpeed = 600.f;
+
+    UFUNCTION()
+    void ToggleShoulderLight();
+
+    void Yaw(float Value);
+    void Pitch(float Value);
+
+    void MoveX(float Value);
+    void MoveY(float Value);
+
+    void StartRunning();
+    void StopRunning();
+
+    bool bLightOn = true;
+    bool bIsRunning = false;
 };
+

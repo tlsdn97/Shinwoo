@@ -14,4 +14,7 @@ class A2025_05_12_API APGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+
+public:
+	APGameModeBase();
 };
