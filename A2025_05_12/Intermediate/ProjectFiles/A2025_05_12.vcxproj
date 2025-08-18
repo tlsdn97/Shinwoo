@@ -290,6 +290,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -308,6 +311,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingTrigger.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PFadeWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
