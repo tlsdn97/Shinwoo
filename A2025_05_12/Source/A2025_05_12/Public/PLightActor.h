@@ -12,15 +12,21 @@ class A2025_05_12_API APLightActor : public AActor
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	APLightActor();
-
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    UPROPERTY(VisibleAnywhere, Category = "Components")
+    USceneComponent* Root;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+    UPROPERTY(VisibleAnywhere, Category = "Components")
+    UStaticMeshComponent* LightMesh;
+
+    UPROPERTY(VisibleAnywhere, Category = "Components")
+    class URectLightComponent* RectLight;
+
+public:
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Light")
+    FVector LightOffset;
+
+    virtual void OnConstruction(const FTransform& Transform) override;
 
 };
