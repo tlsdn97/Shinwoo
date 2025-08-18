@@ -10,7 +10,6 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h" 
 
-
 APPlayer::APPlayer()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -37,12 +36,12 @@ APPlayer::APPlayer()
     ShoulderLight->LightColor = FColor::White;
 
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
-  
 }
+
 
 void APPlayer::BeginPlay()
 {
-	Super::BeginPlay();
+    Super::BeginPlay();
 }
 
 
@@ -106,6 +105,4 @@ void APPlayer::StopRunning()
     bIsRunning = false;
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
-
-
 

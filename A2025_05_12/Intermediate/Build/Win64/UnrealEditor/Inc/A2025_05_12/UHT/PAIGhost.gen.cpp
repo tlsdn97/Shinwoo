@@ -72,6 +72,7 @@ template<> A2025_05_12_API UClass* StaticClass<APAIGhost>()
 {
 	return APAIGhost::StaticClass();
 }
+APAIGhost::APAIGhost(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(APAIGhost);
 APAIGhost::~APAIGhost() {}
 // End Class APAIGhost

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Blueprint/UserWidget.h"
 #include "PPlayer.generated.h"
 
 UCLASS()
@@ -13,7 +14,6 @@ class A2025_05_12_API APPlayer : public ACharacter
 
 public:
 	APPlayer();
-
 protected:
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

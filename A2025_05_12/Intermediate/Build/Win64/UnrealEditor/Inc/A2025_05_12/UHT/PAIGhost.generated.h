@@ -24,6 +24,8 @@ public: \
 
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_12_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API APAIGhost(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APAIGhost(APAIGhost&&); \
@@ -31,7 +33,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APAIGhost); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APAIGhost); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APAIGhost) \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APAIGhost) \
 	NO_API virtual ~APAIGhost();
 
 

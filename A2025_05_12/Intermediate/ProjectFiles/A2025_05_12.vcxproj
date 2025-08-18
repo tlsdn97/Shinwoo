@@ -263,10 +263,13 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\A2025_05_12\A2025_05_12.h"/>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\MyUserWidget.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIGhost.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PContiueWidget.cpp">
@@ -281,6 +284,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingTrigger.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PFadeWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -293,12 +299,14 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\MyUserWidget.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIAnimInstance.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PAnimInstance.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PContiueWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingCredWiget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingTrigger.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PFadeWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
