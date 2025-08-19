@@ -2,5 +2,10 @@
 
 
 #include "PAIGhost.h"
+#include "PAIController.h"
 
-
+APAIGhost::APAIGhost()
+{
+	AIControllerClass = APAIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+}

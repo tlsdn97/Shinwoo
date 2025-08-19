@@ -11,4 +11,10 @@ class A2025_05_12_API APAIGhost : public ACharacter
 {
 	GENERATED_BODY()
 
+public:
+	APAIGhost();
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float WalkSpeed = 300.f;
 };
