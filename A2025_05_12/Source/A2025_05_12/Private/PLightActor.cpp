@@ -16,18 +16,19 @@ APLightActor::APLightActor()
     LightMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LightMesh"));
     LightMesh->SetupAttachment(Root);
 
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> PlaneMesh(TEXT("/Engine/BasicShapes/Cube"));
-    if (PlaneMesh.Succeeded())
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeMesh(TEXT("/Engine/BasicShapes/Cube"));
+    if (CubeMesh.Succeeded())
     {
-        LightMesh->SetStaticMesh(PlaneMesh.Object);
-        LightMesh->SetRelativeScale3D(FVector(2.f, 0.2f, 0.05f));
+        LightMesh->SetStaticMesh(CubeMesh.Object);
+        LightMesh->SetRelativeScale3D(FVector(1.f, 1.f, 0.05f));
     }
 
     RectLight = CreateDefaultSubobject<URectLightComponent>(TEXT("RectLight"));
     RectLight->SetupAttachment(Root);
-    RectLight->SourceWidth = 200.f;
-    RectLight->SourceHeight = 40.f;
-    RectLight->Intensity = 5000.f;
+    RectLight->SourceWidth = 100.f;
+    RectLight->SourceHeight = 100.f;
+    RectLight->Intensity = 20000.f;        
+    RectLight->AttenuationRadius = 1000.f;  
     RectLight->SetLightColor(FLinearColor::White);
 
     LightOffset = FVector(0.f, 0.f, -20.f);
@@ -40,6 +41,7 @@ void APLightActor::OnConstruction(const FTransform& Transform)
     if (RectLight)
     {
         RectLight->SetRelativeLocation(LightOffset);
+        RectLight->SetVisibility(true); 
     }
 }
 
