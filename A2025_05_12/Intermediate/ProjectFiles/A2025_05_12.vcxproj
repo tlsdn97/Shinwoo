@@ -281,6 +281,12 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PContiueWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -320,6 +326,8 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAnimInstance.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PContiueWidget.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingCredWiget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingTrigger.h"/>
