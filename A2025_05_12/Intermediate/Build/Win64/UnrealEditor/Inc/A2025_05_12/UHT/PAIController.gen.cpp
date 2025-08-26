@@ -35,6 +35,7 @@ struct Z_Construct_UClass_APAIController_Statics
 		{ "HideCategories", "Collision Rendering Transformation" },
 		{ "IncludePath", "PAIController.h" },
 		{ "ModuleRelativePath", "Public/PAIController.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -75,7 +76,6 @@ template<> A2025_05_12_API UClass* StaticClass<APAIController>()
 {
 	return APAIController::StaticClass();
 }
-APAIController::APAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(APAIController);
 APAIController::~APAIController() {}
 // End Class APAIController
@@ -84,10 +84,10 @@ APAIController::~APAIController() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APAIController, APAIController::StaticClass, TEXT("APAIController"), &Z_Registration_Info_UClass_APAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIController), 3259928263U) },
+		{ Z_Construct_UClass_APAIController, APAIController::StaticClass, TEXT("APAIController"), &Z_Registration_Info_UClass_APAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIController), 2024099153U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController_h_2421938573(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController_h_3100917411(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

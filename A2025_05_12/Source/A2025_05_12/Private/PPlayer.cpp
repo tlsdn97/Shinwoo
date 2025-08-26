@@ -19,21 +19,20 @@ APPlayer::APPlayer()
     FirstPersonCamera->SetRelativeLocation(FVector(0.f, 0.f, 64.f));
     FirstPersonCamera->bUsePawnControlRotation = true;
 
-    FirstPersonArms = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonArms"));
-    FirstPersonArms->SetupAttachment(FirstPersonCamera);
-    FirstPersonArms->SetOnlyOwnerSee(true);
-    FirstPersonArms->bCastDynamicShadow = true;
-    FirstPersonArms->CastShadow = true;
+    FlashlightRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FlashlightRoot"));
+    FlashlightRoot->SetupAttachment(FirstPersonCamera);
+    FlashlightRoot->SetRelativeLocation(FVector(20.f, 20.f, -10.f));
 
-    ShoulderLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("ShoulderLight"));
-    ShoulderLight->SetupAttachment(FirstPersonArms, TEXT("ShoulderSocket"));
-    ShoulderLight->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
-    ShoulderLight->Intensity = 5000.f;
-    ShoulderLight->AttenuationRadius = 1000.f;
-    ShoulderLight->InnerConeAngle = 20.f;
-    ShoulderLight->OuterConeAngle = 40.f;
-    ShoulderLight->bUseInverseSquaredFalloff = false;
-    ShoulderLight->LightColor = FColor::White;
+    Flashlight = CreateDefaultSubobject<USpotLightComponent>(TEXT("Flashlight"));
+    Flashlight->SetupAttachment(FlashlightRoot);
+
+    Flashlight->Intensity = 5000.f;
+    Flashlight->AttenuationRadius = 2500.f;
+    Flashlight->InnerConeAngle = 20.f;
+    Flashlight->OuterConeAngle = 40.f;
+    Flashlight->LightColor = FColor(255, 248, 231);
+    Flashlight->bUseInverseSquaredFalloff = true;
+    Flashlight->CastShadows = true;
 
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
@@ -64,7 +63,7 @@ void APPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void APPlayer::ToggleShoulderLight()
 {
     bLightOn = !bLightOn;
-    ShoulderLight->SetVisibility(bLightOn);
+    Flashlight->SetVisibility(bLightOn);
 }
 
 void APPlayer::Yaw(float Value)

@@ -8,7 +8,16 @@ public class A2025_05_12 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG","AIModule","GameplayTasks"});
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", 
+															"CoreUObject",
+															"Engine",
+															"InputCore",
+															"EnhancedInput",
+															"UMG",
+															"AIModule",
+															"GameplayTasks",
+															"NavigationSystem",
+															"HeadMountedDisplay"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

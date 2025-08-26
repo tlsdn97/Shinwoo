@@ -21,11 +21,11 @@ protected:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
     class UCameraComponent* FirstPersonCamera;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Mesh")
-    class USkeletalMeshComponent* FirstPersonArms;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Light)
+    class USpotLightComponent* Flashlight;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Light")
-    class USpotLightComponent* ShoulderLight;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Light)
+    class USceneComponent* FlashlightRoot;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
     float WalkSpeed = 300.f;
@@ -36,6 +36,7 @@ protected:
     UFUNCTION()
     void ToggleShoulderLight();
 
+
     void Yaw(float Value);
     void Pitch(float Value);
 
@@ -45,7 +46,7 @@ protected:
     void StartRunning();
     void StopRunning();
 
-    bool bLightOn = true;
+    bool bLightOn = false;
     bool bIsRunning = false;
 };
 

@@ -49,7 +49,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIController.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIController2.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIGhost.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PAIGhost2.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PAnimInstance.cpp">
@@ -58,25 +64,16 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PContiueWidget.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTask_FindRandomLocation.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieActor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieWidget.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingCredWiget.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingTrigger.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PFadeWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
@@ -89,6 +86,9 @@
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayerController.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartGameMode.cpp">
@@ -109,7 +109,13 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIController.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIController2.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost2.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAnimInstance.h">
@@ -118,25 +124,16 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PContiueWidget.h">
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTask_FindRandomLocation.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingCredWiget.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingTrigger.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PFadeWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h">
@@ -149,6 +146,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h">

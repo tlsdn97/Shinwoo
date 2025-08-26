@@ -14,7 +14,9 @@ class A2025_05_12_API APAIController : public AAIController
 {
 	GENERATED_BODY()
 
+public:
+	explicit APAIController(FObjectInitializer const& ObjectInitializer);
+
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
-	
 };

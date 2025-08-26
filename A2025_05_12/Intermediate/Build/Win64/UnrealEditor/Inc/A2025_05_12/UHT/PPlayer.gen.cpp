@@ -14,7 +14,7 @@ A2025_05_12_API UClass* Z_Construct_UClass_APPlayer();
 A2025_05_12_API UClass* Z_Construct_UClass_APPlayer_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpotLightComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
 // End Cross Module References
@@ -75,12 +75,12 @@ struct Z_Construct_UClass_APPlayer_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PPlayer.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FirstPersonArms_MetaData[] = {
-		{ "Category", "Mesh" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Flashlight_MetaData[] = {
+		{ "Category", "Light" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PPlayer.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShoulderLight_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FlashlightRoot_MetaData[] = {
 		{ "Category", "Light" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PPlayer.h" },
@@ -95,8 +95,8 @@ struct Z_Construct_UClass_APPlayer_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCamera;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonArms;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ShoulderLight;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Flashlight;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_FlashlightRoot;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -111,14 +111,14 @@ struct Z_Construct_UClass_APPlayer_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_FirstPersonCamera = { "FirstPersonCamera", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, FirstPersonCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonCamera_MetaData), NewProp_FirstPersonCamera_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_FirstPersonArms = { "FirstPersonArms", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, FirstPersonArms), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonArms_MetaData), NewProp_FirstPersonArms_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_ShoulderLight = { "ShoulderLight", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, ShoulderLight), Z_Construct_UClass_USpotLightComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShoulderLight_MetaData), NewProp_ShoulderLight_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_Flashlight = { "Flashlight", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, Flashlight), Z_Construct_UClass_USpotLightComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Flashlight_MetaData), NewProp_Flashlight_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_FlashlightRoot = { "FlashlightRoot", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, FlashlightRoot), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FlashlightRoot_MetaData), NewProp_FlashlightRoot_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeed_MetaData), NewProp_WalkSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APPlayer_Statics::NewProp_RunSpeed = { "RunSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APPlayer, RunSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunSpeed_MetaData), NewProp_RunSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APPlayer_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_FirstPersonCamera,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_FirstPersonArms,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_ShoulderLight,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_Flashlight,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_FlashlightRoot,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_WalkSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APPlayer_Statics::NewProp_RunSpeed,
 };
@@ -163,10 +163,10 @@ APPlayer::~APPlayer() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APPlayer, APPlayer::StaticClass, TEXT("APPlayer"), &Z_Registration_Info_UClass_APPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayer), 3180732220U) },
+		{ Z_Construct_UClass_APPlayer, APPlayer::StaticClass, TEXT("APPlayer"), &Z_Registration_Info_UClass_APPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayer), 4055633681U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_2437483795(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_3957327247(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
