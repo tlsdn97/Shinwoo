@@ -4,13 +4,12 @@
 #include "PPlayerController.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
-#include "Components/VerticalBox.h"
 #include "Components/TextBlock.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "PDeathUIWidget.h"
 
-void APPlayerController::ShowGameOverUI()
+void APPlayerController::BeginPlay()
 {
     Super::BeginPlay();
 
@@ -18,9 +17,10 @@ void APPlayerController::ShowGameOverUI()
     {
         UE_LOG(LogTemp, Warning, TEXT("GameOverWidgetClass is not set."));
     }
+
 }
 
-void APPlayerController::BeginPlay()
+void APPlayerController::ShowDieUI()
 {
     if (GameOverWidget || !GameOverWidgetClass) return;
 

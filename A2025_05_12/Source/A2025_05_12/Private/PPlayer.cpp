@@ -8,7 +8,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/InputSettings.h"
 #include "Components/CapsuleComponent.h"
-#include "GameFramework/CharacterMovementComponent.h" 
+#include "GameFramework/CharacterMovementComponent.h"
+
+#include "Blueprint/UserWidget.h"
 
 APPlayer::APPlayer()
 {
@@ -33,6 +35,9 @@ APPlayer::APPlayer()
     Flashlight->LightColor = FColor(255, 248, 231);
     Flashlight->bUseInverseSquaredFalloff = true;
     Flashlight->CastShadows = true;
+
+    GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_WorldStatic, ECR_Block);
+    GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }

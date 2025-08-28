@@ -16,7 +16,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnExitClicked); \
-	DECLARE_FUNCTION(execOnRePlaytClicked);
+	DECLARE_FUNCTION(execOnRePlaytClicked); \
+	DECLARE_FUNCTION(execShowDieUI);
 
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_15_INCLASS_NO_PURE_DECLS \

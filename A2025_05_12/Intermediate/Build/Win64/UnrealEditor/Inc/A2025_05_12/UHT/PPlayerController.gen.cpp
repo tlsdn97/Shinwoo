@@ -76,6 +76,36 @@ DEFINE_FUNCTION(APPlayerController::execOnRePlaytClicked)
 }
 // End Class APPlayerController Function OnRePlaytClicked
 
+// Begin Class APPlayerController Function ShowDieUI
+struct Z_Construct_UFunction_APPlayerController_ShowDieUI_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Game" },
+		{ "ModuleRelativePath", "Public/PPlayerController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APPlayerController_ShowDieUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APPlayerController, nullptr, "ShowDieUI", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APPlayerController_ShowDieUI_Statics::Function_MetaDataParams), Z_Construct_UFunction_APPlayerController_ShowDieUI_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APPlayerController_ShowDieUI()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APPlayerController_ShowDieUI_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APPlayerController::execShowDieUI)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowDieUI();
+	P_NATIVE_END;
+}
+// End Class APPlayerController Function ShowDieUI
+
 // Begin Class APPlayerController
 void APPlayerController::StaticRegisterNativesAPPlayerController()
 {
@@ -83,6 +113,7 @@ void APPlayerController::StaticRegisterNativesAPPlayerController()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnExitClicked", &APPlayerController::execOnExitClicked },
 		{ "OnRePlaytClicked", &APPlayerController::execOnRePlaytClicked },
+		{ "ShowDieUI", &APPlayerController::execShowDieUI },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -113,6 +144,7 @@ struct Z_Construct_UClass_APPlayerController_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_APPlayerController_OnExitClicked, "OnExitClicked" }, // 2238598536
 		{ &Z_Construct_UFunction_APPlayerController_OnRePlaytClicked, "OnRePlaytClicked" }, // 1959114763
+		{ &Z_Construct_UFunction_APPlayerController_ShowDieUI, "ShowDieUI" }, // 3816499490
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -166,10 +198,10 @@ APPlayerController::~APPlayerController() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APPlayerController, APPlayerController::StaticClass, TEXT("APPlayerController"), &Z_Registration_Info_UClass_APPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayerController), 3740142457U) },
+		{ Z_Construct_UClass_APPlayerController, APPlayerController::StaticClass, TEXT("APPlayerController"), &Z_Registration_Info_UClass_APPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayerController), 1395779364U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_2683707281(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_3772030301(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

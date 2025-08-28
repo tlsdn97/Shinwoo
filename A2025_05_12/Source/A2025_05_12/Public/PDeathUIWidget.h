@@ -22,7 +22,4 @@ public:
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* QuitButton;
-
-	UPROPERTY(meta = (BindWidget))
-	class UVerticalBox* ButtonBox;
 };

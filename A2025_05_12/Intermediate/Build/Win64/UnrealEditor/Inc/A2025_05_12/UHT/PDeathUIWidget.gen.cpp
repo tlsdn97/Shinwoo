@@ -14,7 +14,6 @@ A2025_05_12_API UClass* Z_Construct_UClass_UPDeathUIWidget();
 A2025_05_12_API UClass* Z_Construct_UClass_UPDeathUIWidget_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
-UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
 // End Cross Module References
 
@@ -47,15 +46,9 @@ struct Z_Construct_UClass_UPDeathUIWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PDeathUIWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ButtonBox_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/PDeathUIWidget.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RestartButton;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_QuitButton;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ButtonBox;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -65,11 +58,9 @@ struct Z_Construct_UClass_UPDeathUIWidget_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_RestartButton = { "RestartButton", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPDeathUIWidget, RestartButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RestartButton_MetaData), NewProp_RestartButton_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_QuitButton = { "QuitButton", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPDeathUIWidget, QuitButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_QuitButton_MetaData), NewProp_QuitButton_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_ButtonBox = { "ButtonBox", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPDeathUIWidget, ButtonBox), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ButtonBox_MetaData), NewProp_ButtonBox_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPDeathUIWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_RestartButton,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_QuitButton,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPDeathUIWidget_Statics::NewProp_ButtonBox,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPDeathUIWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPDeathUIWidget_Statics::DependentSingletons[])() = {
@@ -113,10 +104,10 @@ UPDeathUIWidget::~UPDeathUIWidget() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPDeathUIWidget, UPDeathUIWidget::StaticClass, TEXT("UPDeathUIWidget"), &Z_Registration_Info_UClass_UPDeathUIWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPDeathUIWidget), 156543569U) },
+		{ Z_Construct_UClass_UPDeathUIWidget, UPDeathUIWidget::StaticClass, TEXT("UPDeathUIWidget"), &Z_Registration_Info_UClass_UPDeathUIWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPDeathUIWidget), 953589140U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_2159304095(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_4217583279(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

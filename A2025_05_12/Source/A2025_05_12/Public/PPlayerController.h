@@ -14,7 +14,8 @@ class A2025_05_12_API APPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 public:
-	void ShowGameOverUI();
+    UFUNCTION(BlueprintCallable, Category = "Game")
+    void ShowDieUI();
 protected:
     virtual void BeginPlay() override;
 
