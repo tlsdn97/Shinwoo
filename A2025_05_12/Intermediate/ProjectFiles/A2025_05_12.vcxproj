@@ -281,7 +281,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTService_CheckPlayerLost.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTask_FindRandomLocation.cpp">
@@ -317,6 +323,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PTalkWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -326,7 +335,9 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost2.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAnimInstance.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTService_CheckPlayerLost.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode_FindRandomLocation.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTask_FindRandomLocation.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h"/>
@@ -338,6 +349,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PTalkWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h"/>
   </ItemGroup>
   <PropertyGroup>

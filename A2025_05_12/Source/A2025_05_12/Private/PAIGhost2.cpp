@@ -2,42 +2,43 @@
 
 
 #include "PAIGhost2.h"
-#include "Kismet/GameplayStatics.h"
-#include "GameFramework/PlayerController.h"
-#include "Blueprint/UserWidget.h"
+#include "Perception/PawnSensingComponent.h"
+#include "PAIController2.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GamePlayStatics.h"
+
+#include "Components/SphereComponent.h"
+#include "GameFramework/Character.h"
+//#include "PlayerController_Sc.h"
 
 APAIGhost2::APAIGhost2()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensing"));
+	PawnSensing->SightRadius = 850.f;
+	PawnSensing->SetPeripheralVisionAngle(65.f);
+
+	GetCharacterMovement()->MaxWalkSpeed = 100.f;
+
+	AIControllerClass = APAIController2::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 void APAIGhost2::BeginPlay()
 {
 	Super::BeginPlay();
-	OnActorBeginOverlap.AddDynamic(this, &APAIGhost2::OnOverlapBegin);
-	
 }
 
-void APAIGhost2::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor)
+void APAIGhost2::OnSeePawn(APawn* Pawn)
 {
-    if (!OtherActor || OtherActor == this) return;
-
-    ACharacter* PlayerChar = Cast<ACharacter>(OtherActor);
-    if (!PlayerChar) return;
-
-    if (UIWidgetClass)
-    {
-        UUserWidget* Widget = CreateWidget<UUserWidget>(GetWorld(), UIWidgetClass);
-        if (Widget)
-        {
-            Widget->AddToViewport();
-
-            if (APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0))
-            {
-                PC->bShowMouseCursor = true;
-                PC->SetInputMode(FInputModeUIOnly());
-            }
-        }
-    }
+	auto AICon = Cast<APAIController2>(GetController());
+	if (AICon && AICon->GetBlackboardComponent())
+	{
+		AICon->GetBlackboardComponent()->SetValueAsObject("TargetActor", Pawn);
+		GetCharacterMovement()->MaxWalkSpeed = 350.f;
+	}
 }
+
+

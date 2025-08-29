@@ -9,14 +9,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
+class APawn;
 #ifdef A2025_05_12_PAIGhost2_generated_h
 #error "PAIGhost2.generated.h already included, missing '#pragma once' in PAIGhost2.h"
 #endif
 #define A2025_05_12_PAIGhost2_generated_h
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnOverlapBegin);
+	DECLARE_FUNCTION(execOnSeePawn);
 
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_12_INCLASS_NO_PURE_DECLS \
