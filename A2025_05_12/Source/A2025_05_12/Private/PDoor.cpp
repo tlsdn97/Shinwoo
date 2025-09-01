@@ -77,11 +77,10 @@ void APDoor::HandleTimelineProgress(float Value)
 
 void APDoor::SetOpenDirection(APPlayer* Player)
 {
+	FVector PlayerForward = Player->GetActorForwardVector(); 
 	FVector DoorForward = DoorFrame->GetForwardVector();
-	FVector ToPlayer = Player->GetActorLocation() - GetActorLocation();
-	ToPlayer.Normalize();
 
-	float Dot = FVector::DotProduct(DoorForward, ToPlayer);
+	float Dot = FVector::DotProduct(DoorForward, PlayerForward);
 
 	if (Dot < 0)
 	{

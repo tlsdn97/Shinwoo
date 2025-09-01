@@ -37,12 +37,12 @@ struct Z_Construct_UClass_APAIController2_Statics
 		{ "IncludePath", "PAIController2.h" },
 		{ "ModuleRelativePath", "Public/PAIController2.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BehaviorTree_MetaData[] = {
-		{ "Category", "PAIController2" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BehaviorTreeAsset_MetaData[] = {
+		{ "Category", "AI" },
 		{ "ModuleRelativePath", "Public/PAIController2.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BehaviorTree;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BehaviorTreeAsset;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -50,9 +50,9 @@ struct Z_Construct_UClass_APAIController2_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIController2_Statics::NewProp_BehaviorTree = { "BehaviorTree", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIController2, BehaviorTree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BehaviorTree_MetaData), NewProp_BehaviorTree_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIController2_Statics::NewProp_BehaviorTreeAsset = { "BehaviorTreeAsset", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIController2, BehaviorTreeAsset), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BehaviorTreeAsset_MetaData), NewProp_BehaviorTreeAsset_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APAIController2_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIController2_Statics::NewProp_BehaviorTree,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIController2_Statics::NewProp_BehaviorTreeAsset,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APAIController2_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APAIController2_Statics::DependentSingletons[])() = {
@@ -87,7 +87,6 @@ template<> A2025_05_12_API UClass* StaticClass<APAIController2>()
 {
 	return APAIController2::StaticClass();
 }
-APAIController2::APAIController2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(APAIController2);
 APAIController2::~APAIController2() {}
 // End Class APAIController2
@@ -96,10 +95,10 @@ APAIController2::~APAIController2() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController2_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APAIController2, APAIController2::StaticClass, TEXT("APAIController2"), &Z_Registration_Info_UClass_APAIController2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIController2), 3936502384U) },
+		{ Z_Construct_UClass_APAIController2, APAIController2::StaticClass, TEXT("APAIController2"), &Z_Registration_Info_UClass_APAIController2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIController2), 1629910626U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController2_h_1636235363(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController2_h_3745083081(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController2_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIController2_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

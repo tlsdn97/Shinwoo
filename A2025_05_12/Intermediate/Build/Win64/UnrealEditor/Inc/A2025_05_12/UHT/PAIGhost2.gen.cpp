@@ -12,62 +12,14 @@ void EmptyLinkFunctionForGeneratedCodePAIGhost2() {}
 // Begin Cross Module References
 A2025_05_12_API UClass* Z_Construct_UClass_APAIGhost2();
 A2025_05_12_API UClass* Z_Construct_UClass_APAIGhost2_NoRegister();
-AIMODULE_API UClass* Z_Construct_UClass_UPawnSensingComponent_NoRegister();
+AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
 // End Cross Module References
-
-// Begin Class APAIGhost2 Function OnSeePawn
-struct Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics
-{
-	struct PAIGhost2_eventOnSeePawn_Parms
-	{
-		APawn* Pawn;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/PAIGhost2.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Pawn;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::NewProp_Pawn = { "Pawn", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PAIGhost2_eventOnSeePawn_Parms, Pawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::NewProp_Pawn,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APAIGhost2, nullptr, "OnSeePawn", nullptr, nullptr, Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PropPointers), sizeof(Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PAIGhost2_eventOnSeePawn_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::Function_MetaDataParams), Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::PAIGhost2_eventOnSeePawn_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_APAIGhost2_OnSeePawn()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APAIGhost2_OnSeePawn_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(APAIGhost2::execOnSeePawn)
-{
-	P_GET_OBJECT(APawn,Z_Param_Pawn);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->OnSeePawn(Z_Param_Pawn);
-	P_NATIVE_END;
-}
-// End Class APAIGhost2 Function OnSeePawn
 
 // Begin Class APAIGhost2
 void APAIGhost2::StaticRegisterNativesAPAIGhost2()
 {
-	UClass* Class = APAIGhost2::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "OnSeePawn", &APAIGhost2::execOnSeePawn },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(APAIGhost2);
 UClass* Z_Construct_UClass_APAIGhost2_NoRegister()
@@ -82,27 +34,23 @@ struct Z_Construct_UClass_APAIGhost2_Statics
 		{ "IncludePath", "PAIGhost2.h" },
 		{ "ModuleRelativePath", "Public/PAIGhost2.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PawnSensing_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Tree_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "AI" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PAIGhost2.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnSensing;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Tree;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
-	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_APAIGhost2_OnSeePawn, "OnSeePawn" }, // 2046760442
-	};
-	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APAIGhost2>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIGhost2_Statics::NewProp_PawnSensing = { "PawnSensing", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost2, PawnSensing), Z_Construct_UClass_UPawnSensingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PawnSensing_MetaData), NewProp_PawnSensing_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIGhost2_Statics::NewProp_Tree = { "Tree", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost2, Tree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Tree_MetaData), NewProp_Tree_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APAIGhost2_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost2_Statics::NewProp_PawnSensing,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost2_Statics::NewProp_Tree,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APAIGhost2_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APAIGhost2_Statics::DependentSingletons[])() = {
@@ -115,11 +63,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_APAIGhost2_Statics::Cla
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	FuncInfo,
+	nullptr,
 	Z_Construct_UClass_APAIGhost2_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	UE_ARRAY_COUNT(FuncInfo),
+	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_APAIGhost2_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -145,10 +93,10 @@ APAIGhost2::~APAIGhost2() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APAIGhost2, APAIGhost2::StaticClass, TEXT("APAIGhost2"), &Z_Registration_Info_UClass_APAIGhost2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIGhost2), 2980676693U) },
+		{ Z_Construct_UClass_APAIGhost2, APAIGhost2::StaticClass, TEXT("APAIGhost2"), &Z_Registration_Info_UClass_APAIGhost2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIGhost2), 3343770503U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_1049088669(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_3562724613(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost2_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

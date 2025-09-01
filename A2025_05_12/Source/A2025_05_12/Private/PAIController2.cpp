@@ -2,14 +2,30 @@
 
 
 #include "PAIController2.h"
+#include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Kismet/GameplayStatics.h"
 
-void APAIController2::OnPossess(APawn* InPawn)
+APAIController2::APAIController2()
 {
-    Super::OnPossess(InPawn);
+	bAttachToPawn = true;
+}
 
-    if (BehaviorTree)
+void APAIController2::BeginPlay()
+{
+    Super::BeginPlay();
+
+    if (BehaviorTreeAsset)
     {
-        RunBehaviorTree(BehaviorTree);
+        RunBehaviorTree(BehaviorTreeAsset);
+
+        if (GetBlackboardComponent())
+        {
+            APawn* MyPawn = GetPawn();
+            if (MyPawn)
+            {
+                GetBlackboardComponent()->SetValueAsVector(TEXT("OriginalLocation"), MyPawn->GetActorLocation());
+            }
+        }
     }
 }

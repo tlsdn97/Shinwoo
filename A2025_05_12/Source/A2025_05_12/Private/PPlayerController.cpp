@@ -8,6 +8,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "PDeathUIWidget.h"
+#include "PDieWidget.h"
 
 void APPlayerController::BeginPlay()
 {

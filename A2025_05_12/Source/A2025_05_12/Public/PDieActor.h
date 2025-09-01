@@ -13,5 +13,18 @@ class A2025_05_12_API APDieActor : public AActor
 	
 public:	
 	APDieActor();
+protected:
+    virtual void BeginPlay() override;
+
+    UPROPERTY(VisibleAnywhere, Category = "Collision")
+    class UBoxComponent* CollisionBox;
+
+    UPROPERTY(EditAnywhere, Category = "UI")
+    TSubclassOf<class UUserWidget> DeathWidgetClass;
+
+    bool bIsTriggered = false;
+
+    UFUNCTION()
+    void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 };

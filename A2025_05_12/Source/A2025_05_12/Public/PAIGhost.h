@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "BehaviorTree/BehaviorTree.h"
 #include "PAIGhost.generated.h"
 
 UCLASS()
@@ -14,9 +13,6 @@ class A2025_05_12_API APAIGhost : public ACharacter
 
 public:
 	APAIGhost();
-
-	UBehaviorTree* GetBehavioTree() const;
-
 protected:
 	virtual void BeginPlay() override;
 
@@ -28,9 +24,25 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float WalkSpeed = 300.f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI", meta =(AllowPrivateAccess = "true"))
-	UBehaviorTree* Tree;
-
 	UPROPERTY(VisibleAnywhere, Category = "Collision")
 	class USphereComponent* DetectionSphere;
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+	class UPawnSensingComponent* PawnSensing;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float WalkSpeeds = 400.f;
+
+	FVector OriginalLocation;
+	bool bIsChasing;
+	bool bCanChase;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	float ChaseDuration = 15.0f;
+	FTimerHandle ChaseTimerHandle;
+
+	UFUNCTION()
+	void OnSeePawn(APawn* Pawn);
+	void StopChase();
 };

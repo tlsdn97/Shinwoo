@@ -15,8 +15,11 @@ class A2025_05_12_API APAIController2 : public AAIController
 	GENERATED_BODY()
 
 public:
-	virtual void OnPossess(APawn* InPawn) override;
+    APAIController2();
 
-	UPROPERTY(EditDefaultsOnly)
-	class UBehaviorTree* BehaviorTree;
+protected:
+    virtual void BeginPlay() override;
+
+    UPROPERTY(EditAnywhere, Category = "AI")
+    UBehaviorTree* BehaviorTreeAsset;
 };

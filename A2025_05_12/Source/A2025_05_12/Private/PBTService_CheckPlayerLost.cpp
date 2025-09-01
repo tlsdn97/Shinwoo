@@ -20,6 +20,12 @@ void UPBTService_CheckPlayerLost::TickNode(UBehaviorTreeComponent& OwnerComp, ui
     AAIController* AICon = OwnerComp.GetAIOwner();
     ACharacter* AIPawn = Cast<ACharacter>(AICon ? AICon->GetPawn() : nullptr);
 
+    UBlackboardComponent* BBComp = OwnerComp.GetBlackboardComponent();
+    if (BBComp)
+    {
+        BBComp->SetValueAsObject("TargetActor", Target);
+    }
+
     if (!Target || !AIPawn) return;
 
     const float Distance = FVector::Dist(AIPawn->GetActorLocation(), Target->GetActorLocation());

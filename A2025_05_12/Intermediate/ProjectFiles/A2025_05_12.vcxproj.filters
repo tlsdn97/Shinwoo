@@ -70,19 +70,22 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTask_FindRandomLocation.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieActor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieWidget.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PJumpTrap.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
@@ -139,19 +142,22 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode_FindRandomLocation.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTask_FindRandomLocation.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h">

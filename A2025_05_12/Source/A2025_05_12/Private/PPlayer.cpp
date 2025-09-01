@@ -40,6 +40,8 @@ APPlayer::APPlayer()
     GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
+
+    Tags.Add("Player");
 }
 
 
