@@ -82,6 +82,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PFixedTextWidget.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -107,6 +110,9 @@
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PTalkWidget.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PUIPlayerController.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
@@ -154,6 +160,9 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -179,6 +188,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PTalkWidget.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PUIPlayerController.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h">

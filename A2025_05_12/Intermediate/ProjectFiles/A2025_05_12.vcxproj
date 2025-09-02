@@ -302,6 +302,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PFixedTextWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -329,6 +332,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PTalkWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PUIPlayerController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -345,6 +351,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
@@ -354,6 +361,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PTalkWidget.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PUIPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h"/>
   </ItemGroup>
   <PropertyGroup>
