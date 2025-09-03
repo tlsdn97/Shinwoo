@@ -284,10 +284,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTService_CheckPlayerLost.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PContinueActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PContinueWdiget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
@@ -302,6 +305,12 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingUI.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingUIGameModeBase.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PFixedTextWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -312,9 +321,6 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PPatrolRouteComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
@@ -329,12 +335,6 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PTalkWidget.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PUIPlayerController.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -345,23 +345,23 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAIGhost2.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PAnimInstance.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTService_CheckPlayerLost.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode_FindRandomLocation.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueActor.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueWdiget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingUI.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingUIGameModeBase.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PPatrolRouteComponent.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PTalkWidget.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PUIPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h"/>
   </ItemGroup>
   <PropertyGroup>

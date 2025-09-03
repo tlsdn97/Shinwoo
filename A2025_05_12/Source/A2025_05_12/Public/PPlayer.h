@@ -33,6 +33,12 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
     float RunSpeed = 600.f;
 
+    UPROPERTY(EditAnywhere, Category = "UI")
+    TSubclassOf<class UPFixedTextWidget> TextWidgetClass;
+
+    UPROPERTY()
+    class UPFixedTextWidget* TextWidgetInstance;
+
     UFUNCTION()
     void ToggleShoulderLight();
 

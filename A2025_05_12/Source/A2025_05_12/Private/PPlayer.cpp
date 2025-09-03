@@ -9,8 +9,11 @@
 #include "GameFramework/InputSettings.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-
 #include "Blueprint/UserWidget.h"
+#include "GameFramework/PlayerController.h"
+#include "PFixedTextWidget.h"
+
+
 
 APPlayer::APPlayer()
 {
@@ -44,10 +47,18 @@ APPlayer::APPlayer()
     Tags.Add("Player");
 }
 
-
 void APPlayer::BeginPlay()
 {
     Super::BeginPlay();
+
+    if (TextWidgetClass)
+    {
+        TextWidgetInstance = CreateWidget<UPFixedTextWidget>(GetWorld(), TextWidgetClass);
+        if (TextWidgetInstance)
+        {
+            TextWidgetInstance->AddToViewport();
+        }
+    }
 }
 
 

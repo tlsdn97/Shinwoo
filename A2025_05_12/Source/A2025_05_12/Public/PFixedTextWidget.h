@@ -13,5 +13,7 @@ UCLASS()
 class A2025_05_12_API UPFixedTextWidget : public UUserWidget
 {
 	GENERATED_BODY()
-	
+public:
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* InfoText;
 };

@@ -64,10 +64,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTService_CheckPlayerLost.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PBTTaskNode_FindRandomLocation.cpp">
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PContinueActor.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PContinueWdiget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
@@ -82,6 +85,12 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDoor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingUI.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PEndingUIGameModeBase.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PFixedTextWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -94,9 +103,6 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PPatrolRouteComponent.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -107,12 +113,6 @@
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartWidget.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PTalkWidget.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PUIPlayerController.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
@@ -142,10 +142,13 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTService_CheckPlayerLost.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode.h">
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode_FindRandomLocation.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PBTTaskNode_FindRandomLocation.h">
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueActor.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueWdiget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h">
@@ -160,6 +163,12 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDoor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingUI.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PEndingUIGameModeBase.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -172,9 +181,6 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PPatrolRouteComponent.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -185,12 +191,6 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PTalkWidget.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PUIPlayerController.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h">

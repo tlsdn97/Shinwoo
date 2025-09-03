@@ -9,6 +9,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "PDeathUIWidget.h"
 #include "PDieWidget.h"
+#include "PEndingUI.h"
 
 void APPlayerController::BeginPlay()
 {
