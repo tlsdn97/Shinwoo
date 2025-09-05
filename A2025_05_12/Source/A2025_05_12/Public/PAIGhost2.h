@@ -14,10 +14,15 @@ class A2025_05_12_API APAIGhost2 : public ACharacter
 public:
 	APAIGhost2();
 
-	class UBehaviorTree* GetBehavioTree() const;
 protected:
     virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI", meta = (AllowPrivateAccess = "true"))
-	class UBehaviorTree* Tree;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+   class UPawnSensingComponent* PawnSensingComp;
+
+   UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+   float WalkSpeeds = 400.f;
+
+    UFUNCTION()
+    void OnSeePawn2(APawn* Pawn);
 };

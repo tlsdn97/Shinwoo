@@ -22,4 +22,7 @@ public:
 
 	UPROPERTY(meta = (BindWidget))
 	class UButton* QuitButton;
+
+	UFUNCTION()
+	void OnRestartClicked();
 };

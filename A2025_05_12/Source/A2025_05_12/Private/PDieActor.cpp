@@ -27,25 +27,25 @@ void APDieActor::BeginPlay()
 
 void APDieActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (bIsTriggered) return;
+    if (bIsTriggered) return;
 
-	if (OtherActor && OtherActor->ActorHasTag("Player"))
-	{
-		if (DeathWidgetClass)
-		{
-			UUserWidget* DeathWidget = CreateWidget<UUserWidget>(GetWorld(), DeathWidgetClass);
-			if (DeathWidget)
-			{
-				DeathWidget->AddToViewport();
-				bIsTriggered = true;
+    if (OtherActor && OtherActor->ActorHasTag("Player"))
+    {
+        if (DeathWidgetClass)
+        {
+            UUserWidget* DeathWidget = CreateWidget<UUserWidget>(GetWorld(), DeathWidgetClass);
+            if (DeathWidget)
+            {
+                DeathWidget->AddToViewport();
+                bIsTriggered = true;
 
-				APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-				if (PC)
-				{
-					PC->SetInputMode(FInputModeUIOnly());
-					PC->bShowMouseCursor = true;
-				}
-			}
-		}
-	}
+                APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+                if (PC)
+                {
+                    PC->SetInputMode(FInputModeUIOnly());
+                    PC->bShowMouseCursor = true;
+                }
+            }
+        }
+    }
 }

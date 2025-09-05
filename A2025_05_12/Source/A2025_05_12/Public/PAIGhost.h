@@ -22,7 +22,7 @@ protected:
 		bool bFromSweep, const FHitResult& SweepResult);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float WalkSpeed = 300.f;
+	float WalkSpeeds = 400.f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Collision")
 	class USphereComponent* DetectionSphere;
@@ -31,15 +31,14 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	class UPawnSensingComponent* PawnSensing;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float WalkSpeeds = 400.f;
+	
 
 	FVector OriginalLocation;
 	bool bIsChasing;
 	bool bCanChase;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float ChaseDuration = 15.0f;
+	float ChaseDuration = 0.0f;
 	FTimerHandle ChaseTimerHandle;
 
 	UFUNCTION()

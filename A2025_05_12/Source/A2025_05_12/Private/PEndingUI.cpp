@@ -26,5 +26,5 @@ void UPEndingUI::OnEndClicked()
         PC->SetInputMode(InputMode);
     }
 
-    UGameplayStatics::OpenLevel(this, TEXT("StartMap"));
+    UGameplayStatics::OpenLevel(this, TEXT("1_StartMap"));
 }

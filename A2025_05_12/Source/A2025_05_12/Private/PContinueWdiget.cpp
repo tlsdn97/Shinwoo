@@ -25,5 +25,5 @@ void UPContinueWdiget::OnAndClicked()
 		PC->SetInputMode(InputMode);
 	}
 
-	UGameplayStatics::OpenLevel(this, TEXT("EndingMap"));
+	UGameplayStatics::OpenLevel(this, TEXT("3_EndingMap"));
 }

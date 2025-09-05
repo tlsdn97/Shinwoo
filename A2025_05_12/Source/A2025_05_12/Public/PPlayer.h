@@ -39,6 +39,9 @@ protected:
     UPROPERTY()
     class UPFixedTextWidget* TextWidgetInstance;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+    FVector LastSavePoint;
+
     UFUNCTION()
     void ToggleShoulderLight();
 
@@ -54,5 +57,9 @@ protected:
 
     bool bLightOn = false;
     bool bIsRunning = false;
+ 
+public:
+    void SetLastSavePoint(FVector Location);
+    FVector GetLastSavePoint() const;
 };
 

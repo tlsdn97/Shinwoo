@@ -169,7 +169,7 @@ struct Z_Construct_UClass_APAIGhost_Statics
 		{ "IncludePath", "PAIGhost.h" },
 		{ "ModuleRelativePath", "Public/PAIGhost.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeed_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeeds_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Public/PAIGhost.h" },
 	};
@@ -183,19 +183,14 @@ struct Z_Construct_UClass_APAIGhost_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PAIGhost.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeeds_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "Public/PAIGhost.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChaseDuration_MetaData[] = {
 		{ "Category", "AI" },
 		{ "ModuleRelativePath", "Public/PAIGhost.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeeds;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DetectionSphere;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnSensing;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeeds;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ChaseDuration;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -209,16 +204,14 @@ struct Z_Construct_UClass_APAIGhost_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeed_MetaData), NewProp_WalkSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeeds = { "WalkSpeeds", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, WalkSpeeds), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeeds_MetaData), NewProp_WalkSpeeds_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_DetectionSphere = { "DetectionSphere", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, DetectionSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DetectionSphere_MetaData), NewProp_DetectionSphere_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_PawnSensing = { "PawnSensing", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, PawnSensing), Z_Construct_UClass_UPawnSensingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PawnSensing_MetaData), NewProp_PawnSensing_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeeds = { "WalkSpeeds", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, WalkSpeeds), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeeds_MetaData), NewProp_WalkSpeeds_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APAIGhost_Statics::NewProp_ChaseDuration = { "ChaseDuration", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APAIGhost, ChaseDuration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChaseDuration_MetaData), NewProp_ChaseDuration_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APAIGhost_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeeds,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_DetectionSphere,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_PawnSensing,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_WalkSpeeds,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APAIGhost_Statics::NewProp_ChaseDuration,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APAIGhost_Statics::PropPointers) < 2048);
@@ -262,10 +255,10 @@ APAIGhost::~APAIGhost() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APAIGhost, APAIGhost::StaticClass, TEXT("APAIGhost"), &Z_Registration_Info_UClass_APAIGhost, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIGhost), 1404845632U) },
+		{ Z_Construct_UClass_APAIGhost, APAIGhost::StaticClass, TEXT("APAIGhost"), &Z_Registration_Info_UClass_APAIGhost, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APAIGhost), 1982578273U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_830107131(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_1824455119(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PAIGhost_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

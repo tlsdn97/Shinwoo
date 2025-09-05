@@ -15,8 +15,9 @@ class A2025_05_12_API APAIController : public AAIController
 	GENERATED_BODY()
 
 public:
-	explicit APAIController(FObjectInitializer const& ObjectInitializer);
+	virtual void OnPossess(APawn* InPawn) override;
 
 protected:
-	virtual void OnPossess(APawn* InPawn) override;
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	class UBehaviorTree* BehaviorTreeAsset;
 };

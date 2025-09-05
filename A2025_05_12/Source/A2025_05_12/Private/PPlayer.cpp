@@ -45,6 +45,8 @@ APPlayer::APPlayer()
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 
     Tags.Add("Player");
+
+    LastSavePoint = FVector::ZeroVector;
 }
 
 void APPlayer::BeginPlay()
@@ -121,5 +123,15 @@ void APPlayer::StopRunning()
 {
     bIsRunning = false;
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
+}
+
+void APPlayer::SetLastSavePoint(FVector Location)
+{
+    LastSavePoint = Location;
+}
+
+FVector APPlayer::GetLastSavePoint() const
+{
+    return LastSavePoint;
 }
 
