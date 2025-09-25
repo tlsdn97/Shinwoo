@@ -2,9 +2,9 @@
 
 
 #include "PDieWidget.h"
+#include "Kismet/GameplayStatics.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
-#include "Kismet/GameplayStatics.h"
 #include "PPlayer.h"
 
 

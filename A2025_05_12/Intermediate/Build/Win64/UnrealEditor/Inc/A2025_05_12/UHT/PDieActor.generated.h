@@ -18,6 +18,7 @@ struct FHitResult;
 #define A2025_05_12_PDieActor_generated_h
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execResetTrigger); \
 	DECLARE_FUNCTION(execOnOverlapBegin);
 
 

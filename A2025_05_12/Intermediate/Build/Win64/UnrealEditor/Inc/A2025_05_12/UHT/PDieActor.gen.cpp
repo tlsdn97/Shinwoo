@@ -104,12 +104,42 @@ DEFINE_FUNCTION(APDieActor::execOnOverlapBegin)
 }
 // End Class APDieActor Function OnOverlapBegin
 
+// Begin Class APDieActor Function ResetTrigger
+struct Z_Construct_UFunction_APDieActor_ResetTrigger_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PDieActor.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APDieActor_ResetTrigger_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APDieActor, nullptr, "ResetTrigger", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APDieActor_ResetTrigger_Statics::Function_MetaDataParams), Z_Construct_UFunction_APDieActor_ResetTrigger_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APDieActor_ResetTrigger()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APDieActor_ResetTrigger_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APDieActor::execResetTrigger)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetTrigger();
+	P_NATIVE_END;
+}
+// End Class APDieActor Function ResetTrigger
+
 // Begin Class APDieActor
 void APDieActor::StaticRegisterNativesAPDieActor()
 {
 	UClass* Class = APDieActor::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnOverlapBegin", &APDieActor::execOnOverlapBegin },
+		{ "ResetTrigger", &APDieActor::execResetTrigger },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -134,13 +164,20 @@ struct Z_Construct_UClass_APDieActor_Statics
 		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/PDieActor.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsTriggered_MetaData[] = {
+		{ "Category", "Death" },
+		{ "ModuleRelativePath", "Public/PDieActor.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionBox;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_DeathWidgetClass;
+	static void NewProp_bIsTriggered_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsTriggered;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_APDieActor_OnOverlapBegin, "OnOverlapBegin" }, // 3742310509
+		{ &Z_Construct_UFunction_APDieActor_ResetTrigger, "ResetTrigger" }, // 1757422448
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -150,9 +187,15 @@ struct Z_Construct_UClass_APDieActor_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APDieActor_Statics::NewProp_CollisionBox = { "CollisionBox", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APDieActor, CollisionBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionBox_MetaData), NewProp_CollisionBox_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APDieActor_Statics::NewProp_DeathWidgetClass = { "DeathWidgetClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APDieActor, DeathWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeathWidgetClass_MetaData), NewProp_DeathWidgetClass_MetaData) };
+void Z_Construct_UClass_APDieActor_Statics::NewProp_bIsTriggered_SetBit(void* Obj)
+{
+	((APDieActor*)Obj)->bIsTriggered = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APDieActor_Statics::NewProp_bIsTriggered = { "bIsTriggered", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APDieActor), &Z_Construct_UClass_APDieActor_Statics::NewProp_bIsTriggered_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsTriggered_MetaData), NewProp_bIsTriggered_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APDieActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APDieActor_Statics::NewProp_CollisionBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APDieActor_Statics::NewProp_DeathWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APDieActor_Statics::NewProp_bIsTriggered,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APDieActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APDieActor_Statics::DependentSingletons[])() = {
@@ -195,10 +238,10 @@ APDieActor::~APDieActor() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APDieActor, APDieActor::StaticClass, TEXT("APDieActor"), &Z_Registration_Info_UClass_APDieActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APDieActor), 3767101241U) },
+		{ Z_Construct_UClass_APDieActor, APDieActor::StaticClass, TEXT("APDieActor"), &Z_Registration_Info_UClass_APDieActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APDieActor), 527700499U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_2023423092(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_172179469(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

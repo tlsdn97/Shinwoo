@@ -5,6 +5,7 @@
 #include "Components/BoxComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Blueprint/UserWidget.h"
+#include "EngineUtils.h"
 
 APDieActor::APDieActor()
 {
@@ -17,12 +18,31 @@ APDieActor::APDieActor()
     CollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
     CollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
     CollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+
+    
 }
 
 void APDieActor::BeginPlay()
 {   
     Super::BeginPlay();
-    CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &APDieActor::OnOverlapBegin);
+
+    if (CollisionBox)
+    {
+        CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &APDieActor::OnOverlapBegin);
+    }
+
+    bIsTriggered = false;
+}
+
+void APDieActor::ResetTrigger()
+{
+    bIsTriggered = false;
+
+    if (CollisionBox)
+    {
+        CollisionBox->SetGenerateOverlapEvents(true);
+        CollisionBox->ClearMoveIgnoreActors();
+    }
 }
 
 void APDieActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)

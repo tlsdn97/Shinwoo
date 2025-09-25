@@ -100,6 +100,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PFixedTextWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameInstance.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -115,6 +118,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayerController.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveGame.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -128,6 +134,9 @@
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallText.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <Filter Include="Source\A2025_05_12\Public">
@@ -190,6 +199,9 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameInstance.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -205,6 +217,9 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveGame.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -218,6 +233,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallText.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
   </ItemGroup>
