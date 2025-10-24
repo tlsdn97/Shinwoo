@@ -5,6 +5,7 @@
 #include "Components/Button.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "PDialogueWidget.h"
 
 
 bool UPEndingUI::Initialize()

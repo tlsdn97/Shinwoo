@@ -81,6 +81,12 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueData.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueWidget.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDieActor.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -109,6 +115,9 @@
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PNcpCharacter.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
@@ -180,6 +189,12 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueData.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueWidget.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
@@ -208,6 +223,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PNcpCharacter.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h">

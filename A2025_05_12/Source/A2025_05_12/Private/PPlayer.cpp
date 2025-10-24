@@ -6,13 +6,17 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/SpotLightComponent.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "GameFramework/InputSettings.h"
-#include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Blueprint/UserWidget.h"
-#include "GameFramework/PlayerController.h"
-#include "PFixedTextWidget.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
 
+#include "GameFramework/InputSettings.h"
+#include "GameFramework/PlayerController.h"
+#include "Kismet/GameplayStatics.h"
+#include "Blueprint/UserWidget.h"
+#include "PFixedTextWidget.h"
+#include "PNcpCharacter.h"
+#include "PDialogueWidget.h"
 
 
 APPlayer::APPlayer()
@@ -63,7 +67,6 @@ void APPlayer::BeginPlay()
     }
 }
 
-
 void APPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -78,6 +81,7 @@ void APPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
     PlayerInputComponent->BindAction("Run", IE_Pressed, this, &APPlayer::StartRunning);
     PlayerInputComponent->BindAction("Run", IE_Released, this, &APPlayer::StopRunning);
+    PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &APPlayer::TryInteract);
 }
 
 void APPlayer::ToggleShoulderLight()
@@ -133,5 +137,22 @@ void APPlayer::SetLastSavePoint(FVector Location)
 FVector APPlayer::GetLastSavePoint() const
 {
     return LastSavePoint;
+}
+
+void APPlayer::TryInteract()
+{
+    TArray<AActor*> FoundNPCs;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), APNcpCharacter::StaticClass(), FoundNPCs);
+
+    for (AActor* NPC : FoundNPCs)
+    {
+        APNcpCharacter* Target = Cast<APNcpCharacter>(NPC);
+        if (Target && Target->bCanInteract)
+        {
+            Target->StartConversation(this);
+            break;
+        }
+    }
+
 }
 

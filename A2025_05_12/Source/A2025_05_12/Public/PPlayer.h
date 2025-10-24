@@ -55,7 +55,9 @@ protected:
     void StartRunning();
     void StopRunning();
 
-    bool bLightOn = false;
+    void TryInteract();
+
+    bool bLightOn;
     bool bIsRunning = false;
  
 public:
