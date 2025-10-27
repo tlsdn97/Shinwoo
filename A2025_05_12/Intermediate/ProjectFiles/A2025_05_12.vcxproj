@@ -340,6 +340,12 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PNcpCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PNpcAIController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PNpcCharacter2.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -393,6 +399,8 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNcpCharacter.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcAIController.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcCharacter2.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveGame.h"/>
