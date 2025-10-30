@@ -19,15 +19,12 @@ public:
     virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 
 protected:
-    UPROPERTY(BlueprintReadOnly, Category = "Movement")
-    float Speed;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
+    float ForwardSpeed;
 
-    UPROPERTY(BlueprintReadOnly, Category = "Movement")
-    bool bIsInAir;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
+    float RightSpeed;
 
-    UPROPERTY(BlueprintReadOnly, Category = "Movement")
-    float YawRate;
-
-private:
-    APawn* OwnerPawn;
+    UPROPERTY(BlueprintReadOnly, Category = "Character")
+    APawn* OwningPawn;
 };

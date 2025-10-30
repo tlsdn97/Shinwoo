@@ -23,25 +23,29 @@ APPlayer::APPlayer()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-    FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
-    FirstPersonCamera->SetupAttachment(GetCapsuleComponent());
-    FirstPersonCamera->SetRelativeLocation(FVector(0.f, 0.f, 64.f));
-    FirstPersonCamera->bUsePawnControlRotation = true;
+    CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+    CameraBoom->SetupAttachment(GetRootComponent());
+    CameraBoom->TargetArmLength = 300.0f;
+    CameraBoom->bUsePawnControlRotation = true;     
 
-    FlashlightRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FlashlightRoot"));
-    FlashlightRoot->SetupAttachment(FirstPersonCamera);
-    FlashlightRoot->SetRelativeLocation(FVector(20.f, 20.f, -10.f));
+    FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
+    FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+    FollowCamera->bUsePawnControlRotation = false;
 
-    Flashlight = CreateDefaultSubobject<USpotLightComponent>(TEXT("Flashlight"));
-    Flashlight->SetupAttachment(FlashlightRoot);
+    HeadLightRoot = CreateDefaultSubobject<USceneComponent>(TEXT("HeadLightRoot"));
+    HeadLightRoot->SetupAttachment(FollowCamera);
+    HeadLightRoot->SetRelativeLocation(FVector(30.f, 0.f, 0.f));
 
-    Flashlight->Intensity = 5000.f;
-    Flashlight->AttenuationRadius = 2500.f;
-    Flashlight->InnerConeAngle = 20.f;
-    Flashlight->OuterConeAngle = 40.f;
-    Flashlight->LightColor = FColor(255, 248, 231);
-    Flashlight->bUseInverseSquaredFalloff = true;
-    Flashlight->CastShadows = true;
+    HeadLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("HeadLight"));
+    HeadLight->SetupAttachment(HeadLightRoot);
+    HeadLight->SetIntensity(8000.f);
+    HeadLight->SetAttenuationRadius(2000.f);
+    HeadLight->SetInnerConeAngle(2.f);
+    HeadLight->SetOuterConeAngle(6.f);
+    HeadLight->SetCastShadows(true);
+    bHeadLightOn = false;
+    HeadLight->SetVisibility(false);
+
 
     GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_WorldStatic, ECR_Block);
     GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
@@ -57,6 +61,8 @@ void APPlayer::BeginPlay()
 {
     Super::BeginPlay();
 
+    HeadLight->SetVisibility(bHeadLightOn);
+
     if (TextWidgetClass)
     {
         TextWidgetInstance = CreateWidget<UPFixedTextWidget>(GetWorld(), TextWidgetClass);
@@ -64,6 +70,16 @@ void APPlayer::BeginPlay()
         {
             TextWidgetInstance->AddToViewport();
         }
+    }
+}
+
+void APPlayer::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    if (HeadLight)
+    {
+        HeadLight->SetWorldRotation(FollowCamera->GetComponentRotation());
     }
 }
 
@@ -86,9 +102,12 @@ void APPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void APPlayer::ToggleShoulderLight()
 {
-    bLightOn = !bLightOn;
-    Flashlight->SetVisibility(bLightOn);
+    bHeadLightOn = !bHeadLightOn;
+    HeadLight->SetVisibility(bHeadLightOn);
+
+    UE_LOG(LogTemp, Log, TEXT("HeadLight %s"), bHeadLightOn ? TEXT("ON") : TEXT("OFF"));
 }
+
 
 void APPlayer::Yaw(float Value)
 {

@@ -16,16 +16,21 @@ public:
 	APPlayer();
 protected:
     virtual void BeginPlay() override;
+    virtual void Tick(float DeltaTime) override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
-    class UCameraComponent* FirstPersonCamera;
+    UPROPERTY(VisibleAnywhere, Category = "Camera")
+   class USpringArmComponent* CameraBoom;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Light)
-    class USpotLightComponent* Flashlight;
+    UPROPERTY(VisibleAnywhere, Category = "Camera")
+   class UCameraComponent* FollowCamera;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Light)
-    class USceneComponent* FlashlightRoot;
+
+    UPROPERTY(VisibleAnywhere, Category = "Headlight")
+  class USceneComponent* HeadLightRoot;
+
+    UPROPERTY(VisibleAnywhere, Category = "Headlight")
+    class USpotLightComponent* HeadLight;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
     float WalkSpeed = 300.f;
@@ -57,7 +62,7 @@ protected:
 
     void TryInteract();
 
-    bool bLightOn;
+    bool bHeadLightOn;
     bool bIsRunning = false;
  
 public:

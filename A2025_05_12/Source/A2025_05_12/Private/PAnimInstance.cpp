@@ -6,32 +6,26 @@
 
 UPAnimInstance::UPAnimInstance()
 {
-    Speed = 0.f;
-    bIsInAir = false;
-    YawRate = 0.f;
-    OwnerPawn = nullptr;
+    ForwardSpeed = 0.0f;
+    RightSpeed = 0.0f;
 }
 
 void UPAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
     Super::NativeUpdateAnimation(DeltaSeconds);
 
-    if (!OwnerPawn)
+    if (!OwningPawn)
     {
-        OwnerPawn = TryGetPawnOwner();
-        if (!OwnerPawn) return;
+        OwningPawn = TryGetPawnOwner();
     }
 
-    FVector Velocity = OwnerPawn->GetVelocity();
-    Velocity.Z = 0.f; 
-    Speed = Velocity.Size();
+    if (!OwningPawn) return;
 
-    ACharacter* Character = Cast<ACharacter>(OwnerPawn);
-    if (Character)
-    {
-        bIsInAir = Character->GetCharacterMovement()->IsFalling();
+    FVector Velocity = OwningPawn->GetVelocity();
+    FRotator ControlRotation = OwningPawn->GetActorRotation();
 
-        FRotator DeltaRot = Character->GetActorRotation() - Character->GetActorRotation();
-        YawRate = DeltaRot.Yaw / DeltaSeconds;
-    }
+    FVector LocalVelocity = ControlRotation.UnrotateVector(Velocity);
+
+    ForwardSpeed = LocalVelocity.X;
+    RightSpeed = LocalVelocity.Y;
 }
