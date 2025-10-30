@@ -81,9 +81,6 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueData.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -147,6 +144,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSvaePoint.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PTPActor.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -193,9 +193,6 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueData.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueWidget.h">
@@ -259,6 +256,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSvaePoint.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PTPActor.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h">

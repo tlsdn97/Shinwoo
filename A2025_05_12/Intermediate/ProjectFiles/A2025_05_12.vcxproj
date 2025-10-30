@@ -301,9 +301,6 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDeathUIWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueData.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PDialogueWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -367,6 +364,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSvaePoint.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PTPActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PWallArt.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -386,7 +386,6 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PContinueWdiget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDeathUIWidget.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueData.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDialogueWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PDieWidget.h"/>
@@ -408,6 +407,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSvaePoint.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PTPActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallArt.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PWallText.h"/>
   </ItemGroup>

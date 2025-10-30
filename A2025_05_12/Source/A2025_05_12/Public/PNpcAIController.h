@@ -20,7 +20,7 @@ public:
 protected:
 
     UPROPERTY(EditAnywhere, Category = "AI Movement", meta = (ClampMin = "-1000", ClampMax = "1000"))
-    FVector TargetOffset = FVector(500.f, 0.f, 0.f);
+    FVector TargetOffset = FVector(2000.f, 0.f, 0.f);
 private:
     FVector StartLocation;
     FVector TargetLocation;

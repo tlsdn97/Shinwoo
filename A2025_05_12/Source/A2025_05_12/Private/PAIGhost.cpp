@@ -11,7 +11,6 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Perception/PawnSensingComponent.h"
 
-
 APAIGhost::APAIGhost()
 {
 	PrimaryActorTick.bCanEverTick = true;
