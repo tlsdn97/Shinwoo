@@ -11812,6 +11812,18 @@
     <Filter Include="Plugins\Marketplace">
       <UniqueIdentifier>{1E520605-3A0C-397B-A124-81C6D67B82FE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugins\Marketplace\FabLauncher">
+      <UniqueIdentifier>{74DDC385-BA24-3427-9D5B-2413867119D9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\FabLauncher.uplugin">
+      <Filter>Plugins\Marketplace\FabLauncher</Filter>
+    </None>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Resources">
+      <UniqueIdentifier>{708E7031-F28D-30D5-80C1-444CE6F2658F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Resources\Icon128.png">
+      <Filter>Plugins\Marketplace\FabLauncher\Resources</Filter>
+    </None>
     <Filter Include="Plugins\Marketplace\TargetSystemComponent">
       <UniqueIdentifier>{D36D2F78-CE6D-3FE8-9EFC-5BF921CBB8D1}</UniqueIdentifier>
     </Filter>
@@ -174234,6 +174246,129 @@
     </Filter>
     <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\LightWeightInstancesEditor\Source\LightWeightInstancesEditor\Public\LightWeightInstancesEditor.h">
       <Filter>Plugins\LightWeightInstancesEditor\Source\LightWeightInstancesEditor\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source">
+      <UniqueIdentifier>{72F96250-65D6-330A-ADB7-9D45FEDC92A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies">
+      <UniqueIdentifier>{F805026A-E1D6-3DDC-97D7-D4CEA14CBA74}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\FabLauncherQuixelDependencies.Build.cs">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies</Filter>
+    </None>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private">
+      <UniqueIdentifier>{CD730CD5-5C9F-3345-83FB-44442B33E8E6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\FabLauncherQuixelDependenciesModule.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\FabQuixelGLTFImporter.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines">
+      <UniqueIdentifier>{8C882903-F9D8-3C33-87F4-D6A5D6C6E39D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\FabInterchangeMegascansPipeline.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\FabInterchangeMegascansPipeline.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Factories">
+      <UniqueIdentifier>{9255BB06-3B8C-33E1-9C4F-CD34B04134F2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Factories\FabInterchangeInstancedFoliageTypeFactory.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Factories</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Factories\FabInterchangeInstancedFoliageTypeFactory.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Factories</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Nodes">
+      <UniqueIdentifier>{1A488BCD-EA17-3285-AE4C-9D9031A17D1F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Nodes\FabInterchangeInstancedFoliageTypeFactoryNode.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Nodes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Nodes\FabInterchangeInstancedFoliageTypeFactoryNode.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Private\Pipelines\Nodes</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public">
+      <UniqueIdentifier>{148FCB13-5D61-3952-A6E0-4FD064B10AC3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public\FabQuixelAssetTypes.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public\FabQuixelGLTFImporter.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public\IFabLauncherQuixelDependenciesModule.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncherQuixelDependencies\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncher">
+      <UniqueIdentifier>{B396E316-C4EF-3104-A961-89ABFECFF26E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\FabLauncher.Build.cs">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher</Filter>
+    </None>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private">
+      <UniqueIdentifier>{330A2DBC-1394-3910-BC01-62134F02697D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImportDataHandler.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetsImportController.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\FabLauncherModule.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\FLAssetImportData.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\FLAssetImportDataHandler.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\FLAssetsImportController.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\FLTCPServerImp.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\TCPServerImp.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters">
+      <UniqueIdentifier>{117BB40F-8974-3A98-B95F-943BF424C1F4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters\FLImportSurface.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters</Filter>
+    </ClInclude>
+    <None Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters\Import3D.cpp.bk">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters</Filter>
+    </None>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters\ImportSurface.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\AssetImporters</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities">
+      <UniqueIdentifier>{3C4CCB4B-97EB-3E5E-8E75-830B7424F125}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities\FLMeshOp.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities\FLMiscUtils.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities\FLMiscUtils.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities\MeshOp.cpp">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Private\Utilities</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\Marketplace\FabLauncher\Source\FabLauncher\Public">
+      <UniqueIdentifier>{F336B66F-6399-335F-8960-104414418ECC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\..\..\..\Program Files\Epic Games\UE_5.4\Engine\Plugins\Marketplace\FabLauncher\Source\FabLauncher\Public\IFabLauncherModule.h">
+      <Filter>Plugins\Marketplace\FabLauncher\Source\FabLauncher\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\Marketplace\TargetSystemComponent\Source">
       <UniqueIdentifier>{E65F7C23-661D-327E-9342-7DB27A21CD5D}</UniqueIdentifier>

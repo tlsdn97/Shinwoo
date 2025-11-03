@@ -10,7 +10,6 @@ UCLASS()
 class A2025_05_12_API APTPActor : public AActor
 {
 	GENERATED_BODY()
-	
 public:	
 
 	APTPActor();

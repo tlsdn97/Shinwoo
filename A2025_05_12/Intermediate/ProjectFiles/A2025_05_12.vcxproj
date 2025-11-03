@@ -328,6 +328,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PGameModeBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PItem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PJumpTrap.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -395,6 +398,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PFixedTextWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameInstance.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PItem.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNcpCharacter.h"/>
