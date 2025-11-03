@@ -17,6 +17,8 @@
 #include "PFixedTextWidget.h"
 #include "PNcpCharacter.h"
 #include "PDialogueWidget.h"
+#include "TimerManager.h"
+#include "PSaveGame.h"
 
 
 APPlayer::APPlayer()
@@ -69,6 +71,17 @@ void APPlayer::BeginPlay()
         if (TextWidgetInstance)
         {
             TextWidgetInstance->AddToViewport();
+        }
+    }
+
+    if (UGameplayStatics::DoesSaveGameExist(TEXT("PlayerSlot"), 0))
+    {
+        UPSaveGame* SaveData = Cast<UPSaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("PlayerSlot"), 0));
+        if (SaveData)
+        {
+            SetActorLocation(SaveData->SavedLocation);
+            SetActorRotation(SaveData->SavedRotation);
+            UE_LOG(LogTemp, Log, TEXT("세이브된 위치로 복귀했습니다: %s"), *SaveData->SavedLocation.ToString());
         }
     }
 }
@@ -148,9 +161,10 @@ void APPlayer::StopRunning()
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
 
-void APPlayer::SetLastSavePoint(FVector Location)
+void APPlayer::SaveLastPosition()
 {
-    LastSavePoint = Location;
+    LastSavePoint = GetActorLocation();
+    UE_LOG(LogTemp, Log, TEXT("세이브 포인트 위치 갱신: %s"), *LastSavePoint.ToString());
 }
 
 FVector APPlayer::GetLastSavePoint() const

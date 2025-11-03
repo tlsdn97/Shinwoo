@@ -27,6 +27,7 @@ void UPDeathUIWidget::OnRestartClicked()
     if (RespawnLocation != FVector::ZeroVector)
     {
         Player->SetActorLocation(RespawnLocation);
+        Player->SetActorRotation(FRotator::ZeroRotator);
 
         RemoveFromParent();
 

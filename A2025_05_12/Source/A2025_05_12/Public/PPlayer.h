@@ -44,12 +44,9 @@ protected:
     UPROPERTY()
     class UPFixedTextWidget* TextWidgetInstance;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-    FVector LastSavePoint;
 
     UFUNCTION()
     void ToggleShoulderLight();
-
 
     void Yaw(float Value);
     void Pitch(float Value);
@@ -66,7 +63,11 @@ protected:
     bool bIsRunning = false;
  
 public:
-    void SetLastSavePoint(FVector Location);
+    UFUNCTION(BlueprintCallable)
+    void SaveLastPosition();
     FVector GetLastSavePoint() const;
+
+private:
+    FVector LastSavePoint;
 };
 

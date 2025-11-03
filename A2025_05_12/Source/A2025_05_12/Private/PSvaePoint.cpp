@@ -19,9 +19,9 @@ APSvaePoint::APSvaePoint()
 
 void APSvaePoint::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-    if (APPlayer* Player = Cast<APPlayer>(OtherActor))
+    APPlayer* Player = Cast<APPlayer>(OtherActor);
+    if (Player)
     {
-        UE_LOG(LogTemp, Warning, TEXT("SavePoint Hit! 위치 저장"));
-        Player->SetLastSavePoint(GetActorLocation());
+        Player->SaveLastPosition();   // 위치 저장
     }
 }

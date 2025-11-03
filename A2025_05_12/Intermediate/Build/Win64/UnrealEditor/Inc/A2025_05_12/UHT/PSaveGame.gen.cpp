@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodePSaveGame() {}
 // Begin Cross Module References
 A2025_05_12_API UClass* Z_Construct_UClass_UPSaveGame();
 A2025_05_12_API UClass* Z_Construct_UClass_UPSaveGame_NoRegister();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_USaveGame();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
@@ -37,11 +38,16 @@ struct Z_Construct_UClass_UPSaveGame_Statics
 		{ "ModuleRelativePath", "Public/PSaveGame.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SavedLocation_MetaData[] = {
-		{ "Category", "PSaveGame" },
+		{ "Category", "Save" },
+		{ "ModuleRelativePath", "Public/PSaveGame.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SavedRotation_MetaData[] = {
+		{ "Category", "Save" },
 		{ "ModuleRelativePath", "Public/PSaveGame.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SavedLocation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_SavedRotation;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -49,9 +55,11 @@ struct Z_Construct_UClass_UPSaveGame_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPSaveGame_Statics::NewProp_SavedLocation = { "SavedLocation", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPSaveGame, SavedLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SavedLocation_MetaData), NewProp_SavedLocation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPSaveGame_Statics::NewProp_SavedLocation = { "SavedLocation", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPSaveGame, SavedLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SavedLocation_MetaData), NewProp_SavedLocation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPSaveGame_Statics::NewProp_SavedRotation = { "SavedRotation", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPSaveGame, SavedRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SavedRotation_MetaData), NewProp_SavedRotation_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPSaveGame_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPSaveGame_Statics::NewProp_SavedLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPSaveGame_Statics::NewProp_SavedRotation,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPSaveGame_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPSaveGame_Statics::DependentSingletons[])() = {
@@ -95,10 +103,10 @@ UPSaveGame::~UPSaveGame() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PSaveGame_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPSaveGame, UPSaveGame::StaticClass, TEXT("UPSaveGame"), &Z_Registration_Info_UClass_UPSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPSaveGame), 918536218U) },
+		{ Z_Construct_UClass_UPSaveGame, UPSaveGame::StaticClass, TEXT("UPSaveGame"), &Z_Registration_Info_UClass_UPSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPSaveGame), 219404429U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PSaveGame_h_3796623894(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PSaveGame_h_2891707556(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PSaveGame_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PSaveGame_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
