@@ -19,6 +19,7 @@
 #include "PDialogueWidget.h"
 #include "TimerManager.h"
 #include "PSaveGame.h"
+#include "PGameInstance.h"
 
 
 APPlayer::APPlayer()
@@ -55,8 +56,6 @@ APPlayer::APPlayer()
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 
     Tags.Add("Player");
-
-    LastSavePoint = FVector::ZeroVector;
 }
 
 void APPlayer::BeginPlay()
@@ -74,14 +73,19 @@ void APPlayer::BeginPlay()
         }
     }
 
-    if (UGameplayStatics::DoesSaveGameExist(TEXT("PlayerSlot"), 0))
+    UPGameInstance* GI = Cast<UPGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+
+    if (GI && GI->HasSavedLocation())
     {
-        UPSaveGame* SaveData = Cast<UPSaveGame>(UGameplayStatics::LoadGameFromSlot(TEXT("PlayerSlot"), 0));
-        if (SaveData)
+        // 사망 후 복귀 시 저장된 위치로 이동
+        SetActorLocation(GI->GetSavedLocation());
+    }
+    else
+    {
+        // 새로 실행할 때는 PlayerStart 기준으로 유지
+        if (GI)
         {
-            SetActorLocation(SaveData->SavedLocation);
-            SetActorRotation(SaveData->SavedRotation);
-            UE_LOG(LogTemp, Log, TEXT("세이브된 위치로 복귀했습니다: %s"), *SaveData->SavedLocation.ToString());
+            GI->ClearSavedLocation();
         }
     }
 }
@@ -130,7 +134,6 @@ void APPlayer::Yaw(float Value)
 void APPlayer::Pitch(float Value)
 {
     AddControllerPitchInput(-Value);
-
 }
 
 void APPlayer::MoveX(float Value)
@@ -161,17 +164,6 @@ void APPlayer::StopRunning()
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
 
-void APPlayer::SaveLastPosition()
-{
-    LastSavePoint = GetActorLocation();
-    UE_LOG(LogTemp, Log, TEXT("세이브 포인트 위치 갱신: %s"), *LastSavePoint.ToString());
-}
-
-FVector APPlayer::GetLastSavePoint() const
-{
-    return LastSavePoint;
-}
-
 void APPlayer::TryInteract()
 {
     TArray<AActor*> FoundNPCs;
@@ -188,4 +180,3 @@ void APPlayer::TryInteract()
     }
 
 }
-

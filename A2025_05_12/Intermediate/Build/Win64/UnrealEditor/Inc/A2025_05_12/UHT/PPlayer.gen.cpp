@@ -22,35 +22,6 @@ ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
 // End Cross Module References
 
-// Begin Class APPlayer Function SaveLastPosition
-struct Z_Construct_UFunction_APPlayer_SaveLastPosition_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/PPlayer.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APPlayer_SaveLastPosition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APPlayer, nullptr, "SaveLastPosition", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APPlayer_SaveLastPosition_Statics::Function_MetaDataParams), Z_Construct_UFunction_APPlayer_SaveLastPosition_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_APPlayer_SaveLastPosition()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APPlayer_SaveLastPosition_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(APPlayer::execSaveLastPosition)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->SaveLastPosition();
-	P_NATIVE_END;
-}
-// End Class APPlayer Function SaveLastPosition
-
 // Begin Class APPlayer Function ToggleShoulderLight
 struct Z_Construct_UFunction_APPlayer_ToggleShoulderLight_Statics
 {
@@ -85,7 +56,6 @@ void APPlayer::StaticRegisterNativesAPPlayer()
 {
 	UClass* Class = APPlayer::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "SaveLastPosition", &APPlayer::execSaveLastPosition },
 		{ "ToggleShoulderLight", &APPlayer::execToggleShoulderLight },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -151,7 +121,6 @@ struct Z_Construct_UClass_APPlayer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_APPlayer_SaveLastPosition, "SaveLastPosition" }, // 3664284817
 		{ &Z_Construct_UFunction_APPlayer_ToggleShoulderLight, "ToggleShoulderLight" }, // 2968208180
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -219,10 +188,10 @@ APPlayer::~APPlayer() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APPlayer, APPlayer::StaticClass, TEXT("APPlayer"), &Z_Registration_Info_UClass_APPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayer), 9618613U) },
+		{ Z_Construct_UClass_APPlayer, APPlayer::StaticClass, TEXT("APPlayer"), &Z_Registration_Info_UClass_APPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APPlayer), 153329508U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_1595921235(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_1720610013(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

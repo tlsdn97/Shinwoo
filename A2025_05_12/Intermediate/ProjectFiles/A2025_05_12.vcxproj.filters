@@ -138,6 +138,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveWidget.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PSkyTrap.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartGameMode.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
@@ -253,6 +256,9 @@
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveWidget.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PSkyTrap.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h">

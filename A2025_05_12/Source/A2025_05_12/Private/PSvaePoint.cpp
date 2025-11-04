@@ -3,7 +3,9 @@
 
 #include "PSvaePoint.h"
 #include "Components/BoxComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "PPlayer.h"
+#include "PGameInstance.h"
 
 APSvaePoint::APSvaePoint()
 {
@@ -22,6 +24,13 @@ void APSvaePoint::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
     APPlayer* Player = Cast<APPlayer>(OtherActor);
     if (Player)
     {
-        Player->SaveLastPosition();   // 위치 저장
+        UPGameInstance* GI = Cast<UPGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+        if (GI)
+        {
+            GI->SetSavedLocation(Player->GetActorLocation());  // 현재 위치 저장
+        }
+
+        // 이펙트나 사운드 추가 가능
+        UE_LOG(LogTemp, Warning, TEXT("SavePoint reached: position saved at %s"), *Player->GetActorLocation().ToString());
     }
 }

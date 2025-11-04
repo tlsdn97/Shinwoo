@@ -13,10 +13,5 @@ UCLASS()
 class A2025_05_12_API UPSaveGame : public USaveGame
 {
 	GENERATED_BODY()
-public:
-	UPROPERTY(VisibleAnywhere, Category = "Save")
-	FVector SavedLocation;
 
-	UPROPERTY(VisibleAnywhere, Category = "Save")
-	FRotator SavedRotation;
 };

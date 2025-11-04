@@ -15,7 +15,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define A2025_05_12_PPlayer_generated_h
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PPlayer_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSaveLastPosition); \
 	DECLARE_FUNCTION(execToggleShoulderLight);
 
 

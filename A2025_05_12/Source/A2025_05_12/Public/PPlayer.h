@@ -61,13 +61,5 @@ protected:
 
     bool bHeadLightOn;
     bool bIsRunning = false;
- 
-public:
-    UFUNCTION(BlueprintCallable)
-    void SaveLastPosition();
-    FVector GetLastSavePoint() const;
-
-private:
-    FVector LastSavePoint;
 };
 

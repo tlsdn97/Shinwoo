@@ -6,6 +6,7 @@
 #include "Components/VerticalBox.h"
 #include "Kismet/GameplayStatics.h"
 #include "PPlayer.h"
+#include "PGameInstance.h"
 
 void UPDeathUIWidget::NativeOnInitialized()
 {
@@ -19,35 +20,27 @@ void UPDeathUIWidget::NativeOnInitialized()
 
 void UPDeathUIWidget::OnRestartClicked()
 {
+    APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+    if (!PC) return;
+
+    UPGameInstance* GI = Cast<UPGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
     APPlayer* Player = Cast<APPlayer>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-    if (!Player) return;
+    if (!Player || !GI) return;
 
-    FVector RespawnLocation = Player->GetLastSavePoint();
-
-    if (RespawnLocation != FVector::ZeroVector)
+    if (GI->HasSavedLocation())
     {
+        FVector RespawnLocation = GI->GetSavedLocation();
         Player->SetActorLocation(RespawnLocation);
-        Player->SetActorRotation(FRotator::ZeroRotator);
-
-        RemoveFromParent();
-
-        if (APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0))
-        {
-            PC->SetInputMode(FInputModeGameOnly());
-            PC->bShowMouseCursor = false;
-        }
     }
     else
     {
-        APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-        if (PC)
-        {
-            FName CurrentLevel = *UGameplayStatics::GetCurrentLevelName(GetWorld());
-            UGameplayStatics::OpenLevel(GetWorld(), CurrentLevel);
-
-            PC->SetInputMode(FInputModeGameOnly());
-            PC->bShowMouseCursor = false;
-        }
+        FName CurrentLevel = *UGameplayStatics::GetCurrentLevelName(GetWorld());
+        UGameplayStatics::OpenLevel(GetWorld(), CurrentLevel);
     }
+
+    RemoveFromParent();
+
+    PC->SetInputMode(FInputModeGameOnly());
+    PC->bShowMouseCursor = false;
 }
 

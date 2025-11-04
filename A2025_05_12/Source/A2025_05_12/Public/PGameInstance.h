@@ -14,7 +14,15 @@ class A2025_05_12_API UPGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(BlueprintReadWrite)
-	FVector RespawnLocation = FVector::ZeroVector;
-	
+	UPGameInstance();
+
+    void SetSavedLocation(const FVector& NewLocation);
+    FVector GetSavedLocation() const;
+    bool HasSavedLocation() const;
+
+    void ClearSavedLocation();
+
+private:
+    FVector SavedLocation;
+    bool bHasSavedLocation;
 };

@@ -358,6 +358,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PSkyTrap.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PStartGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -408,6 +411,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveGame.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveWidget.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PSkyTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSvaePoint.h"/>

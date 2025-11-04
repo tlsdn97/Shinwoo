@@ -3,7 +3,7 @@
 
 #include "PItem.h"
 #include "PPlayer.h"
-#include "PSaveGame.h"
+#include "PGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
@@ -17,7 +17,8 @@ APItem::APItem()
 
     Collision = CreateDefaultSubobject<USphereComponent>(TEXT("Collision"));
     Collision->SetupAttachment(RootComponent);
-    Collision->InitSphereRadius(150.f);
+    Collision->SetSphereRadius(120.f);
+    Collision->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
 }
 
 void APItem::BeginPlay()
@@ -31,15 +32,11 @@ void APItem::OnOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, 
     APPlayer* Player = Cast<APPlayer>(OtherActor);
     if (Player)
     {
-        UPSaveGame* SaveData = Cast<UPSaveGame>(
-            UGameplayStatics::CreateSaveGameObject(UPSaveGame::StaticClass()));
-
-        SaveData->SavedLocation = Player->GetActorLocation();
-        SaveData->SavedRotation = Player->GetActorRotation();
-
-        UGameplayStatics::SaveGameToSlot(SaveData, TEXT("PlayerSlot"), 0);
-
-        UE_LOG(LogTemp, Log, TEXT("세이브 지점 저장됨: %s"), *SaveData->SavedLocation.ToString());
+        UPGameInstance* GI = Cast<UPGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+        if (GI)
+        {
+            GI->SetSavedLocation(Player->GetActorLocation());
+        }
         Destroy();
     }
 }
