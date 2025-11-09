@@ -25,4 +25,7 @@ public:
 
 	UFUNCTION()
 	void OnRestartClicked();
+
+	UFUNCTION()
+	void OnQuitClicked();
 };

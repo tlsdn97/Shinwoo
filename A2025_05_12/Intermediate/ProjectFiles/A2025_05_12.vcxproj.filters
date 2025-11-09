@@ -126,13 +126,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PNpcCharacter2.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\POverlapSpawner.cpp">
+      <Filter>Source\A2025_05_12\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayerController.cpp">
-      <Filter>Source\A2025_05_12\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveGame.cpp">
       <Filter>Source\A2025_05_12\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveWidget.cpp">
@@ -246,13 +246,13 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcCharacter2.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\POverlapSpawner.h">
+      <Filter>Source\A2025_05_12\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h">
-      <Filter>Source\A2025_05_12\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveGame.h">
       <Filter>Source\A2025_05_12\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveWidget.h">

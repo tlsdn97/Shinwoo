@@ -16,6 +16,11 @@ void UPDeathUIWidget::NativeOnInitialized()
     {
         RestartButton->OnClicked.AddDynamic(this, &UPDeathUIWidget::OnRestartClicked);
     }
+
+    if (QuitButton)
+    {
+        QuitButton->OnClicked.AddDynamic(this, &UPDeathUIWidget::OnQuitClicked);
+    }
 }
 
 void UPDeathUIWidget::OnRestartClicked()
@@ -43,4 +48,10 @@ void UPDeathUIWidget::OnRestartClicked()
     PC->SetInputMode(FInputModeGameOnly());
     PC->bShowMouseCursor = false;
 }
+
+void UPDeathUIWidget::OnQuitClicked()
+{
+    UKismetSystemLibrary::QuitGame(GetWorld(), nullptr, EQuitPreference::Quit, true);
+}
+
 

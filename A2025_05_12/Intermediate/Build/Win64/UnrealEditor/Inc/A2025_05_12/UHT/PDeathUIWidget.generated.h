@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define A2025_05_12_PDeathUIWidget_generated_h
 
 #define FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnQuitClicked); \
 	DECLARE_FUNCTION(execOnRestartClicked);
 
 

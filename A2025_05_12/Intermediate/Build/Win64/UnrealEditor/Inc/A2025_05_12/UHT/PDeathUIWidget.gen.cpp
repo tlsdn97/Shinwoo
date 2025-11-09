@@ -17,6 +17,35 @@ UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_A2025_05_12();
 // End Cross Module References
 
+// Begin Class UPDeathUIWidget Function OnQuitClicked
+struct Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PDeathUIWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPDeathUIWidget, nullptr, "OnQuitClicked", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPDeathUIWidget::execOnQuitClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnQuitClicked();
+	P_NATIVE_END;
+}
+// End Class UPDeathUIWidget Function OnQuitClicked
+
 // Begin Class UPDeathUIWidget Function OnRestartClicked
 struct Z_Construct_UFunction_UPDeathUIWidget_OnRestartClicked_Statics
 {
@@ -51,6 +80,7 @@ void UPDeathUIWidget::StaticRegisterNativesUPDeathUIWidget()
 {
 	UClass* Class = UPDeathUIWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "OnQuitClicked", &UPDeathUIWidget::execOnQuitClicked },
 		{ "OnRestartClicked", &UPDeathUIWidget::execOnRestartClicked },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -86,6 +116,7 @@ struct Z_Construct_UClass_UPDeathUIWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPDeathUIWidget_OnQuitClicked, "OnQuitClicked" }, // 4194144690
 		{ &Z_Construct_UFunction_UPDeathUIWidget_OnRestartClicked, "OnRestartClicked" }, // 2240517858
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -142,10 +173,10 @@ UPDeathUIWidget::~UPDeathUIWidget() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPDeathUIWidget, UPDeathUIWidget::StaticClass, TEXT("UPDeathUIWidget"), &Z_Registration_Info_UClass_UPDeathUIWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPDeathUIWidget), 3050538109U) },
+		{ Z_Construct_UClass_UPDeathUIWidget, UPDeathUIWidget::StaticClass, TEXT("UPDeathUIWidget"), &Z_Registration_Info_UClass_UPDeathUIWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPDeathUIWidget), 164729438U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_3553553129(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_4069568067(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDeathUIWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

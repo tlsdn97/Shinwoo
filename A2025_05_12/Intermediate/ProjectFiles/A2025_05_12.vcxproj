@@ -346,13 +346,13 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PNpcCharacter2.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\POverlapSpawner.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayer.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PPlayerController.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveGame.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PSaveWidget.cpp">
@@ -407,9 +407,9 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNcpCharacter.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcAIController.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcCharacter2.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\POverlapSpawner.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayer.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PPlayerController.h"/>
-    <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveGame.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSaveWidget.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PSkyTrap.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PStartGameMode.h"/>
