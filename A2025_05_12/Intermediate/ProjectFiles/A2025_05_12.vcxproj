@@ -334,6 +334,9 @@
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PJumpTrap.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\A2025_05_12\Private\PLevelTP.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\A2025_05_12\Private\PLightActor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -403,6 +406,7 @@
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PGameModeBase.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PItem.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PJumpTrap.h"/>
+    <ClInclude Include="..\..\Source\A2025_05_12\Public\PLevelTP.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PLightActor.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNcpCharacter.h"/>
     <ClInclude Include="..\..\Source\A2025_05_12\Public\PNpcAIController.h"/>
