@@ -55,8 +55,11 @@ void APDieActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
             UUserWidget* DeathWidget = CreateWidget<UUserWidget>(GetWorld(), DeathWidgetClass);
             if (DeathWidget)
             {
+                if (DeathWidget->IsInViewport())
+                {
+                    DeathWidget->RemoveFromParent();
+                }
                 DeathWidget->AddToViewport();
-                bIsTriggered = true;
 
                 APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
                 if (PC)

@@ -18,7 +18,6 @@ APLevelTP::APLevelTP()
 void APLevelTP::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 void APLevelTP::NotifyActorBeginOverlap(AActor* OtherActor)
