@@ -7,6 +7,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
+#include "PDieActor.h"
 
 
 void UPDieWidget::NativeConstruct()
@@ -44,3 +45,4 @@ void UPDieWidget::OnRetryClicked()
     PC->SetInputMode(FInputModeGameOnly());
     PC->bShowMouseCursor = false;
 }
+

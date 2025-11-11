@@ -28,7 +28,7 @@ void UPStartWidget::OnStartClicked()
         PC->SetInputMode(InputMode);
     }
 
-    UGameplayStatics::OpenLevel(this, TEXT("2_GameMap"));
+    UGameplayStatics::OpenLevel(this, TEXT("2_GameMap0"));
 }
 
 void UPStartWidget::OnQuitClicked()

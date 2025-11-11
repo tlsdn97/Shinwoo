@@ -12,15 +12,21 @@ class A2025_05_12_API APLevelTP : public AActor
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	APLevelTP();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor)override;
+
 public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+private:
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
+	FString TPLelvelName;
+
+	UPROPERTY()
+	class UBoxComponent* TPLevelVolume;
 
 };

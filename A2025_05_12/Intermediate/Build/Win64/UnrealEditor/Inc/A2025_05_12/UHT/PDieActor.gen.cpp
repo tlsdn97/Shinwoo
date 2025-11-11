@@ -104,6 +104,69 @@ DEFINE_FUNCTION(APDieActor::execOnOverlapBegin)
 }
 // End Class APDieActor Function OnOverlapBegin
 
+// Begin Class APDieActor Function OnOverlapEnd
+struct Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics
+{
+	struct PDieActor_eventOnOverlapEnd_Parms
+	{
+		UPrimitiveComponent* OverlappedComp;
+		AActor* OtherActor;
+		UPrimitiveComponent* OtherComp;
+		int32 OtherBodyIndex;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PDieActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedComp;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OverlappedComp = { "OverlappedComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PDieActor_eventOnOverlapEnd_Parms, OverlappedComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedComp_MetaData), NewProp_OverlappedComp_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PDieActor_eventOnOverlapEnd_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PDieActor_eventOnOverlapEnd_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherBodyIndex = { "OtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PDieActor_eventOnOverlapEnd_Parms, OtherBodyIndex), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OverlappedComp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherComp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::NewProp_OtherBodyIndex,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APDieActor, nullptr, "OnOverlapEnd", nullptr, nullptr, Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PropPointers), sizeof(Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PDieActor_eventOnOverlapEnd_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::Function_MetaDataParams), Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::PDieActor_eventOnOverlapEnd_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APDieActor_OnOverlapEnd()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APDieActor_OnOverlapEnd_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APDieActor::execOnOverlapEnd)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(FIntProperty,Z_Param_OtherBodyIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnOverlapEnd(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex);
+	P_NATIVE_END;
+}
+// End Class APDieActor Function OnOverlapEnd
+
 // Begin Class APDieActor Function ResetTrigger
 struct Z_Construct_UFunction_APDieActor_ResetTrigger_Statics
 {
@@ -139,6 +202,7 @@ void APDieActor::StaticRegisterNativesAPDieActor()
 	UClass* Class = APDieActor::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnOverlapBegin", &APDieActor::execOnOverlapBegin },
+		{ "OnOverlapEnd", &APDieActor::execOnOverlapEnd },
 		{ "ResetTrigger", &APDieActor::execResetTrigger },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -177,6 +241,7 @@ struct Z_Construct_UClass_APDieActor_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_APDieActor_OnOverlapBegin, "OnOverlapBegin" }, // 3742310509
+		{ &Z_Construct_UFunction_APDieActor_OnOverlapEnd, "OnOverlapEnd" }, // 563988787
 		{ &Z_Construct_UFunction_APDieActor_ResetTrigger, "ResetTrigger" }, // 1757422448
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -238,10 +303,10 @@ APDieActor::~APDieActor() {}
 struct Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APDieActor, APDieActor::StaticClass, TEXT("APDieActor"), &Z_Registration_Info_UClass_APDieActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APDieActor), 527700499U) },
+		{ Z_Construct_UClass_APDieActor, APDieActor::StaticClass, TEXT("APDieActor"), &Z_Registration_Info_UClass_APDieActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APDieActor), 2227712200U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_172179469(TEXT("/Script/A2025_05_12"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_2992695978(TEXT("/Script/A2025_05_12"),
 	Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PP_Shinwoo_Shinwoo_A2025_05_12_Source_A2025_05_12_Public_PDieActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

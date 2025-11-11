@@ -19,7 +19,7 @@ APDieActor::APDieActor()
     CollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
     CollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
 
-    
+    bIsTriggered = false;
 }
 
 void APDieActor::BeginPlay()
@@ -29,9 +29,8 @@ void APDieActor::BeginPlay()
     if (CollisionBox)
     {
         CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &APDieActor::OnOverlapBegin);
+        CollisionBox->OnComponentEndOverlap.AddDynamic(this, &APDieActor::OnOverlapEnd);
     }
-
-    bIsTriggered = false;
 }
 
 void APDieActor::ResetTrigger()
@@ -67,5 +66,13 @@ void APDieActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
                 }
             }
         }
+    }
+}
+
+void APDieActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+    if (OtherActor && OtherActor->ActorHasTag("Player"))
+    {
+        bIsTriggered = false;
     }
 }

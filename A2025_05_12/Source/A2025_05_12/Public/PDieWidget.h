@@ -24,5 +24,4 @@ public:
 
 	UFUNCTION()
 	void OnRetryClicked();
-	
 };
